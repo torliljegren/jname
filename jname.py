@@ -50,11 +50,12 @@ if __name__ == "__main__":
         name = svar_in.get()
         if not name.isalpha():
             showerror("Error", "Use letters only.")
+            svar_out.set("")
+            focus_on_wiget.focus_set()
             return
         svar_out.set(translate(name))
         focus_on_wiget.select_range(0, END)
         focus_on_wiget.focus_set()
-
 
     root = Tk()
     root.title("Japanese name")
